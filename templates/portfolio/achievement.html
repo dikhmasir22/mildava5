@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Boxicon -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <!-- RemixIcon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Css Custom -->
+    <link rel="stylesheet" href="../../static/style.css">
+
+    <!-- AOS Animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <title>Achievement Dava</title>
+</head>
+
+<body>
+
+    <section class="portfolio" id="portfolio">
+        <div class="center-text" data-aos="fade-in">
+            <h2>My <span>Achievement</span></h2>
+        </div>
+
+        <div class="Portfolio-content" data-aos="zoom-in-up">
+            {% for item in achievement %}
+            <div class="row">
+                <img src="../../static/assets/Imgachievement/{{item.gambar}}" alt="">
+                <div class="main-row">
+                    <div class="row-text">
+                        <h5>{{item.nama}}</h5>
+                    </div>
+                    <div class="row-icon">
+                        <i class="ri-github-fill"></i>
+                    </div>
+                </div>
+                <h4>{{item.deskripsi}}</h4>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="center-box">
+            <a href="../../" class="btn3">
+                <i class="ri-arrow-left-line"></i>
+                Back to Main Page
+            </a>
+        </div>
+    </section>
+
+    <!-- Js Link -->
+    <script src="js/script.js"></script>
+
+    <!-- Aos Animation Script -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: 300,
+            duration: 1400,
+        });
+    </script>
+</body>
+
+</html>

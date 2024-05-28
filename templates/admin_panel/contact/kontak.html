@@ -1,0 +1,31 @@
+{% include 'admin_panel/headfoot/header.html' %}
+<main id="main" class="main">
+
+    <div class="pagetitle">
+        <h1>Kontak</h1>
+        <nav>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/dashboard">Home</a></li>
+                <li class="breadcrumb-item active">Kontak</li>
+            </ol>
+        </nav>
+    </div><!-- End Page Title -->
+
+    <div class="row container">
+
+        {% for orang in kontak %}
+        <div class="col-4">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body garis-blue rounded">
+                  <h5 class="card-title">{{orang.nama}}</h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">{{orang.email}}</h6>
+                  <p class="card-text">{{orang.keterangan}}</p>
+                </div>
+              </div>
+        </div>
+        {% endfor %}
+
+    </div>
+
+</main><!-- End #main -->
+{% include 'admin_panel/headfoot/footer.html' %}
